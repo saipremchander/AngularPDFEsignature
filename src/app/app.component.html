@@ -1,0 +1,143 @@
+
+
+<div class="bg-light " *ngIf="!url">
+<div class="container p-5" >
+  <div class="row">
+    <div class="col-sm-12 col-md-6 p-5">
+      <h1 class="display-2">eSign PDF</h1>
+      <h2>Upload Your PDF Document</h2>
+       <h6>Angular Pdf Digital Signature</h6>
+   </div>
+   <div class="col-sm-12 col-md-6">
+
+      <div class="box-choose">
+        <label for="file-input" class="d-block">
+          <div class="choose-inner-box position-relative" >
+              <div class="aligncenter">
+                <i class="fa fa-file-pdf-o  text-white"></i>
+                <div class="apf-esign mx-auto mt-2 mb-1">
+       
+                       <div class="choose-file">   Choose File</div><div class="fa fa-cloud-upload icon-pdf"></div>
+                 
+              
+                  <input type="file" (change)="onSelectFile($event)" class="choosefile" id="file-input"  />
+
+                  
+
+              </div>
+              </div>
+          </div>
+        </label>
+      </div>
+
+   </div>
+  </div>
+</div>
+</div>
+
+
+<ngx-extended-pdf-viewer
+
+*ngIf="url"
+[(src)]="url" 
+
+[customToolbar]="multiToolbar"
+
+[showPagingButtons]="true"
+
+
+>
+</ngx-extended-pdf-viewer>
+
+
+
+
+<ng-template #multiToolbar >
+  <div class="headerpdf  position-relative">
+ <div class="flex-spacer"></div>
+      <div class="floatpdfleft  mt-2">
+
+        <pdf-paging-area>
+          <div class="paging-left hiddenTinyView">
+          <pdf-first-page  style="margin-right: -3px;">
+          <button  type="button" title="Go to First Page" id="primaryFirstPage"  class="toolbarButton hiddenLargeView" disabled="">
+          
+           <span class="fa fa fa-step-forward"></span>
+          
+          
+          <span>Go to First Page</span></button>
+          
+          </pdf-first-page>
+          
+          <pdf-previous-page  style="margin-left: -3px;">
+          <button type="button" title="Previous Page" id="previous"  class="toolbarButton" disabled="">
+          
+            <span class="fa fa fa-step-backward"></span>
+          
+          <span>Previous</span></button>
+          </pdf-previous-page>
+          
+          </div><pdf-page-number>
+          <input type="number" id="pageNumber" title="Page" value="1" size="4" min="1"   autocomplete="off" class="toolbarField pageNumber" max="4"><span  id="numPages" class="toolbarLabel hiddenXLView">of 4</span></pdf-page-number><div  class="paging-right hiddenTinyView">
+            
+            <pdf-next-page  style="margin-right: -3px; margin-left: -3px;">
+              <button  type="button" title="Next Page" id="next"  class="toolbarButton">
+             
+                <span class="	fa fa-chevron-left"></span>
+          
+          <span>Next</span></button></pdf-next-page><pdf-last-page  style="margin-left: -3px;"><button  type="button" title="Go to Last Page" id="primaryLastPage"  class="toolbarButton hiddenLargeView">
+            <span class="	fa fa-chevron-right"></span>
+            
+            
+            <span >Go to Last Page</span></button></pdf-last-page></div></pdf-paging-area>
+
+
+            <pdf-rotate-page>
+              <button  type="button" id="primaryPageRotateCw" title="Rotate Clockwise" class="toolbarButton hiddenXLView rotateCw " disabled="">
+              
+                <span class="fa fa-rotate-right"></span>
+
+              </button>
+     
+              
+              <button  type="button" id="primaryPageRotateCcw" title="Rotate Counterclockwise" class="toolbarButton hiddenXLView rotateCcw " disabled="">
+              
+                <span class="fa fa-rotate-left"></span>
+              
+              
+              </button>
+                 </pdf-rotate-page>
+      </div>
+
+      
+      <div class="floatpdfright">
+        <div class="p-top">
+          <button   id="openFile" class="btn btn-pdf-custom">
+            <span class="	fa fa-ellipsis-v"></span>   <span class="	fa fa-ellipsis-v"></span> Change PDF File
+          </button>
+          <button   id="editorInk" class="btn btn-pdf-custom">
+            <span class="	fa fa-ellipsis-v"></span>   <span class="	fa fa-ellipsis-v"></span> <span class="mx-1"><span class="fa fa-edit"></span>Draw Signature</span> <span style="float:right;font-weight: bold;">Add</span>
+          </button>
+          <button   id="editorFreeText" class="btn btn-pdf-custom" >
+            <span class="	fa fa-ellipsis-v"></span>   <span class="	fa fa-ellipsis-v"></span> <span class="mx-1"><span class="fa fa-edit"></span> Text Signature</span> <span style="float:right;font-weight: bold;">Add</span>
+       
+          </button>
+       
+        </div>
+
+
+        <div class="p-bottom">
+          <button id="print" class="btn btn-info btn-pdf-custom text-white">
+            <span class="fa fa-print"></span> Print
+           </button>
+           <button  id="download" class="btn btn-success btn-pdf-custom">
+            <span class="fa fa-download"></span>  Download
+           </button>
+        </div>
+        </div>
+
+ 
+  </div>
+
+
+</ng-template>

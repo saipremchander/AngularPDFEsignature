@@ -1,0 +1,159 @@
+/* You can add global styles to this file, and also import other style files */
+.box-choose{
+    background: #0b6d9f;
+    border-radius: 10px;
+    padding: 10px;
+ 
+}
+.choose-inner-box{
+    border:1px dashed #FFF;
+    border-radius: 10px;
+    height: 400px;
+    background: #085075;
+}
+
+.aligncenter{
+    position: relative;
+    top: 140px;
+    left: 29%;
+    display: inline-block;
+    text-align: center;
+}
+.fa-file-pdf-o  {
+    font-size: 40px;
+}
+.choose-inner-box{
+    cursor: pointer;
+}
+.icon-pdf,
+.choose-file{
+    background: white;
+    cursor: pointer;
+    width: auto;
+  
+    float: left;
+
+    font-size: 16px;
+    line-height: 24px;
+    padding: 11px 24px;
+    border-radius: 4px 0px 0px 4px;
+    text-transform: uppercase;
+}
+.icon-pdf{
+    border-radius: 0px 4px 4px 0px;
+    border-left: 1px solid #b5b5b5;
+    padding: 11px 18px;
+}
+
+.icon-pdf:hover,
+.choose-file:hover{
+    background: rgb(236, 236, 236);
+}
+
+
+.apf-esign > input
+{
+    display: none;
+}
+
+.apf-esign img
+{
+    width: 80px;
+    cursor: pointer;
+}
+
+.floatpdfleft {
+    position: absolute;
+   left:30px;
+}
+
+.floatpdfright{
+    position: fixed;
+    right:  0 !important;
+    top: 5vh;
+    height: 95vh;
+    background: white;
+    width: 20%;
+}
+
+.btn-pdf-custom{
+    margin: 10px !important;
+    padding: 3px 20px !important;
+    font-size: 15px;
+
+}
+.floatpdfright .p-top .btn-pdf-custom{
+    display: block;
+    width: 85%;
+    text-align: left;
+    background: #f1f1f1;
+    border-radius: 0px;
+    padding: 8px !important;
+    color: #2f2f2f;
+    border-left: 4px solid #ff712d !important;
+    border: 1px solid #d4d4d4;
+}
+
+.headerpdf{
+     height: 50px !important;
+
+}
+
+.floatpdfright .p-top .btn-pdf-custom:hover{
+    background: #f9f9f9;
+    box-shadow: 2px 7px 9px 1px #cccccca6;
+}
+
+
+.p-bottom{
+    position: absolute;
+    bottom: 22px;
+    text-align: center;
+    width: 100%;
+    background: #efefef;
+    border-top: 1px solid #cecece;
+}
+
+
+#viewerContainer{
+    width:  80% ;
+}
+
+
+.doorHangerRight{
+    border:none  !important;
+}
+ .doorHangerRight:before{
+    right: 0px !important;
+    content: "Customise Your Signature" !important;
+    border: none !important;
+    top: -27px;
+    width: 100% !important;
+    font-size: 17px;
+    text-decoration: underline;
+    font-weight: 400; 
+    text-transform: uppercase;
+}
+.editorParamsToolbarContainer {
+    width: 100% !important;
+    font-size: 15px;
+
+    font-weight: 600;
+
+}
+
+.editorParamsToolbar {
+    top: 30% !important;
+    position: relative !important;
+    right: 15px !important;
+    display:inline-block;
+    width: 18%;
+    float: right;
+}
+
+.editorParamsToolbarContainer>.editorParamsSetter{
+    border: 1px solid #ebebeb;
+    min-height: 45px !important;
+    margin-top: 15px;
+    background: #fafafa;
+}
